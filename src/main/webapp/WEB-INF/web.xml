@@ -53,16 +53,6 @@
     </servlet-mapping>
     <servlet>
         <description/>
-        <display-name>SecondServlet</display-name>
-        <servlet-name>SecondServlet</servlet-name>
-        <servlet-class>it.marconivr.microblog.Servlet.ProfileServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SecondServlet</servlet-name>
-        <url-pattern>/ProfileServlet</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <description/>
         <display-name>LogoutServlet</display-name>
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>it.marconivr.microblog.Servlet.LogoutServlet</servlet-class>

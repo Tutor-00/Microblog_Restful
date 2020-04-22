@@ -5,8 +5,6 @@ import it.marconivr.microblog.dao.PostDao;
 import it.marconivr.microblog.dao.exceptions.NonexistentEntityException;
 import it.marconivr.microblog.entity.BlogCommento;
 import it.marconivr.microblog.entity.BlogPost;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -21,6 +19,7 @@ import javax.ws.rs.core.MediaType;
  *
  * @author Tutor-00
  */
+
 @Path("/posts")
 public class PostDataService {
    
@@ -59,4 +58,6 @@ public class PostDataService {
         
         PostDao.destroy(Long.parseLong(postId));  
     }
+    
+    
 }
