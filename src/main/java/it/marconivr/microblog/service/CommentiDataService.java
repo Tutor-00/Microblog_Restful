@@ -7,10 +7,15 @@ package it.marconivr.microblog.service;
 
 
 import it.marconivr.microblog.dao.CommentoDao;
+import it.marconivr.microblog.dao.PostDao;
 import it.marconivr.microblog.entity.BlogCommento;
+import it.marconivr.microblog.entity.BlogPost;
+import java.util.List;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -28,4 +33,19 @@ public class CommentiDataService {
         CommentoDao.create(c);
     }
     
+    @GET
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public List<BlogCommento> getCommenti() {
+        List<BlogCommento> commento = CommentoDao.findCommentoEntities();
+        return commento;
+    }
+    
+    @GET
+    @Path("post/{id}")
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public List<BlogCommento> getCommentiByPost(@PathParam("id") String postId) {
+        BlogPost p = PostDao.findPost(Long.parseLong(postId));
+        List<BlogCommento> commento = CommentoDao.findByPost(p);
+        return commento;
+    }
 }
