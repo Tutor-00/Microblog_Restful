@@ -10,6 +10,7 @@ import it.marconivr.microblog.dao.CommentoDao;
 import it.marconivr.microblog.dao.PostDao;
 import it.marconivr.microblog.entity.BlogCommento;
 import it.marconivr.microblog.entity.BlogPost;
+import java.util.Date;
 import java.util.List;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -30,6 +31,8 @@ public class CommentiDataService {
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.APPLICATION_JSON)
     public void addCommento(BlogCommento c){
+        
+        c.setDataOra(new Date());
         CommentoDao.create(c);
     }
     

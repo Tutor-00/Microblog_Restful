@@ -43,19 +43,10 @@ public class PostDataService {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response addPost(BlogPost p) {
+    public void addPost(BlogPost p) {
         p.setDataOra(new Date());
         PostDao.create(p);
-        
-     
-        
-        return Response.created(URI.create("Microblog/rest/posts/" + p.getId()))
-                .header("Access-Control-Allow-Origin", "*")
-                .header("Access-Control-Allow-Headers", "origin, content-type, accept, authorization")
-                .header("Access-Control-Allow-Credentials", "true")
-                .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD")
-                .header("Access-Control-Max-Age", "1209600")
-                .build();
+
     }
 
     @DELETE
@@ -70,17 +61,4 @@ public class PostDataService {
 
         PostDao.destroy(Long.parseLong(postId));
     }
-
-    @OPTIONS
-    @Path("*")
-    public Response options() {
-        return Response.ok("")
-                .header("Access-Control-Allow-Origin", "*")
-                .header("Access-Control-Allow-Headers", "origin, content-type, accept, authorization")
-                .header("Access-Control-Allow-Credentials", "true")
-                .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD")
-                .header("Access-Control-Max-Age", "1209600")
-                .build();
-    }
-
 }
