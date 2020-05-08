@@ -8,7 +8,7 @@
   L'Utente normale può solo commentare i post degli ADMIN.
   
 ## Come usarlo
-  Scaricato il progetto, bisognerà importare il DataBase [Microblog] (https://github.com/Tutor-00/Microblog_Restful/tree/master/Microblog)
+  Scaricato il progetto, bisognerà importare il DataBase [Microblog](https://github.com/Tutor-00/Microblog_Restful/tree/master/Microblog)
   nel progetto su Netbeans, per poi andare su Database fare destro, proprerties e specificare la posizione del database e infine
   fare la connessione.
   
