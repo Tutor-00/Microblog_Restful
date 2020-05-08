@@ -3,9 +3,9 @@
 
   Progetto di TPI, sviluppato su Java utilizzando Spring basato su un database Derby.
   Senza registrazione è possibile visualizzare i post degli altri utenti, per postare,
-  bisogna essere loggati come ADMIN (dev'essere manualmente inserito nel DataBase tramite
-  un commint nel campo "RUOLO" nella tabelle BLOGUTENTE). 
-  L'Utente normale può solo commentare i post degli ADMIN.
+  bisogna essere loggati come ADMIN (dev'essere manualmente inserito nel DataBase tramite,
+  un commint nel campo *RUOLO* nella tabelle BLOGUTENTE). 
+  L'Utente normale può solo commentare i post degli *ADMIN*.
   
 ## Come usarlo
   Scaricato il progetto, bisognerà importare il DataBase [Microblog](https://github.com/Tutor-00/Microblog_Restful/tree/master/Microblog)
