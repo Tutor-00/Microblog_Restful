@@ -34,7 +34,7 @@
                             <li class="nav-item" role="presentation"><a class="nav-link" href="PostServlet">Post</a></li>
 
 
-                        </ul><span class="navbar-text actions"> <a href="login.html" class="login">Accedi</a><a class="btn btn-light action-button" role="button" href="registration.html" style="background-color: rgb(66,191,56);">Registrati</a></span></div>
+                        </ul><span class="navbar-text actions"> <a href="LogoutServlet" class="login">Logout</a></div>
                 </div>
             </nav>
         </div>
